@@ -22,5 +22,5 @@ fs.removeSync(buildPath);
 */
 const campaignPath = path.resolve(__dirname, 'contracts', 'campaign.sol');
 
-
+// reading my contract
 const source = fs.read(campaignPath, 'utf8')
