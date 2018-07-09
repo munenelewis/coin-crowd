@@ -15,4 +15,12 @@ const buildPath = path.resolve(__dirname, 'contracts', 'build')
 /*
 this is  a function that deletes the build folder incase it exist
 */
+fs.removeSync(buildPath);
 
+
+/* buiding the path to my contract
+*/
+const campaignPath = path.resolve(__dirname, 'contracts', 'campaign.sol');
+
+
+const source = fs.read(campaignPath, 'utf8')
