@@ -23,4 +23,16 @@ fs.removeSync(buildPath);
 const campaignPath = path.resolve(__dirname, 'contracts', 'campaign.sol');
 
 // reading my contract
-const source = fs.read(campaignPath, 'utf8')
+const source = fs.read(campaignPath, 'utf8');
+
+// saving the output after reading the contract
+
+const output = solc.compile(Source,1).contracts;
+
+
+/* 
+a function that checks if the build contract exist
+
+*/
+
+fs.ensureDirSync(buildPath);
