@@ -1,7 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-export default () =>{ 
-    return(
-        <h1> This is the campaign page!!!!! </h1>
-    );
+import factory from '../ethereum/factory'
+
+
+class CamapaignIdex extends Component{
+   async componentDidMount(){
+   const campaigns =  await factory.methods.getDeployedCampaings().call();
+
+   console.log(campaigns);
+   
+    }
+
+    render(){
+        return <div> campaigns index </div>
+    }
+
 }
+
+export default CamapaignIdex;
