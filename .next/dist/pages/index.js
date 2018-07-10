@@ -42,6 +42,10 @@ var _factory = require('../ethereum/factory');
 
 var _factory2 = _interopRequireDefault(_factory);
 
+var _layout = require('../components/layout');
+
+var _layout2 = _interopRequireDefault(_layout);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = 'C:\\Users\\user\\Documents\\solidity\\kickstart\\pages\\index.js?entry';
@@ -65,7 +69,7 @@ var CamapaignIdex = function (_Component) {
                     description: _react2.default.createElement('a', {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 21
+                            lineNumber: 23
                         }
                     }, ' View campaigns '),
                     fluid: true
@@ -74,21 +78,26 @@ var CamapaignIdex = function (_Component) {
 
             return _react2.default.createElement(_semanticUiReact.Card.Group, { items: items, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 26
+                    lineNumber: 28
                 }
             });
         }
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', {
+            return _react2.default.createElement(_layout2.default, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 30
+                    lineNumber: 33
+                }
+            }, _react2.default.createElement('div', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 35
                 }
             }, _react2.default.createElement('link', { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 32
+                    lineNumber: 37
                 }
             }), this.renderCampaigns(), _react2.default.createElement(_semanticUiReact.Button, {
                 content: 'Create Campaign',
@@ -96,9 +105,9 @@ var CamapaignIdex = function (_Component) {
                 primary: true,
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 34
+                    lineNumber: 39
                 }
-            }));
+            })));
         }
     }], [{
         key: 'getInitialProps',
@@ -116,8 +125,9 @@ var CamapaignIdex = function (_Component) {
 
                             case 2:
                                 campaigns = _context.sent;
+                                return _context.abrupt('return', { campaigns: campaigns });
 
-                            case 3:
+                            case 4:
                             case 'end':
                                 return _context.stop();
                         }
@@ -137,4 +147,4 @@ var CamapaignIdex = function (_Component) {
 }(_react.Component);
 
 exports.default = CamapaignIdex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIkNhcmQiLCJCdXR0b24iLCJmYWN0b3J5IiwiQ2FtYXBhaWduSWRleCIsIml0ZW1zIiwicHJvcHMiLCJjYW1wYWlnbnMiLCJtYXAiLCJoZWFkZXIiLCJhZGRyZXNzIiwiZGVzY3JpcHRpb24iLCJmbHVpZCIsInJlbmRlckNhbXBhaWducyIsIm1ldGhvZHMiLCJnZXREZXBsb3llZENhbXBhaW5ncyIsImNhbGwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVE7Ozs7QUFFZixBQUFTLEFBQU07O0FBRWYsQUFBTyxBQUFhOzs7Ozs7Ozs7SUFHZCxBOzs7Ozs7Ozs7OzswQ0FTZSxBQUNiO2dCQUFNLGFBQVEsQUFBSyxNQUFMLEFBQVcsVUFBWCxBQUFxQixJQUFJLG1CQUFXLEFBQzlDOzs0QkFBTyxBQUNNLEFBQ1Q7aURBQWEsY0FBQTs7c0NBQUE7d0NBQUE7QUFBQTtBQUFBLHFCQUFBLEVBRlYsQUFFVSxBQUNiOzJCQUhKLEFBQU8sQUFHSSxBQUVkO0FBTFUsQUFDSDtBQUZSLEFBQWMsQUFRZCxhQVJjOztpREFRUCxBQUFFLHNCQUFGLEFBQU8sU0FBTSxPQUFiLEFBQXFCOzhCQUFyQjtnQ0FBUCxBQUFPLEFBQ1Y7QUFEVTthQUFBOzs7O2lDQUdILEFBQ0o7bUNBQU8sY0FBQTs7OEJBQUE7Z0NBQUEsQUFFUDtBQUZPO0FBQUEsYUFBQSwwQ0FFRCxLQUFOLEFBQVUsY0FBYSxNQUF2QixBQUE0Qjs4QkFBNUI7Z0NBRk8sQUFFUCxBQUNFO0FBREY7cUJBRk8sQUFHTCxBQUFLLEFBQ1AsbUNBQUEsQUFBQzt5QkFBRCxBQUNjLEFBQ1Y7c0JBRkosQUFFVyxBQUNQO3lCQUhKOzs4QkFBQTtnQ0FKQSxBQUFPLEFBSVAsQUFRSDtBQVJHO0FBQ0k7OzthQTFCWjs7Ozs7Ozs7Ozs7dUNBRWlDLGtCQUFBLEFBQVEsUUFBUixBQUFnQix1QkFBaEIsQUFBdUMsQTs7aUNBQTFEO0E7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFIYyxBLEFBc0M1Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiJDOi9Vc2Vycy91c2VyL0RvY3VtZW50cy9zb2xpZGl0eS9raWNrc3RhcnQifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIkNhcmQiLCJCdXR0b24iLCJmYWN0b3J5IiwiTGF5b3V0IiwiQ2FtYXBhaWduSWRleCIsIml0ZW1zIiwicHJvcHMiLCJjYW1wYWlnbnMiLCJtYXAiLCJoZWFkZXIiLCJhZGRyZXNzIiwiZGVzY3JpcHRpb24iLCJmbHVpZCIsInJlbmRlckNhbXBhaWducyIsIm1ldGhvZHMiLCJnZXREZXBsb3llZENhbXBhaW5ncyIsImNhbGwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVE7Ozs7QUFFZixBQUFTLEFBQU07O0FBRWYsQUFBTyxBQUFhOzs7O0FBRXBCLEFBQU8sQUFBWTs7Ozs7Ozs7O0lBRWIsQTs7Ozs7Ozs7Ozs7MENBVWUsQUFDYjtnQkFBTSxhQUFRLEFBQUssTUFBTCxBQUFXLFVBQVgsQUFBcUIsSUFBSSxtQkFBVyxBQUM5Qzs7NEJBQU8sQUFDTSxBQUNUO2lEQUFhLGNBQUE7O3NDQUFBO3dDQUFBO0FBQUE7QUFBQSxxQkFBQSxFQUZWLEFBRVUsQUFDYjsyQkFISixBQUFPLEFBR0ksQUFFZDtBQUxVLEFBQ0g7QUFGUixBQUFjLEFBUWQsYUFSYzs7aURBUVAsQUFBRSxzQkFBRixBQUFPLFNBQU0sT0FBYixBQUFxQjs4QkFBckI7Z0NBQVAsQUFBTyxBQUNWO0FBRFU7YUFBQTs7OztpQ0FHSCxBQUNKO21DQUNJLEFBQUM7OzhCQUFEO2dDQUFBLEFBRUo7QUFGSTtBQUFBLGFBQUEsa0JBRUosY0FBQTs7OEJBQUE7Z0NBQUEsQUFFSTtBQUZKO0FBQUEsdURBRVUsS0FBTixBQUFVLGNBQWEsTUFBdkIsQUFBNEI7OEJBQTVCO2dDQUZKLEFBRUksQUFDRTtBQURGO3FCQUZKLEFBR00sQUFBSyxBQUNQLG1DQUFBLEFBQUM7eUJBQUQsQUFDYyxBQUNWO3NCQUZKLEFBRVcsQUFDUDt5QkFISjs7OEJBQUE7Z0NBUEosQUFDSSxBQUVKLEFBSUksQUFXUDtBQVhPO0FBQ0k7OzthQTlCaEI7Ozs7Ozs7Ozs7O3VDQUVpQyxrQkFBQSxBQUFRLFFBQVIsQUFBZ0IsdUJBQWhCLEFBQXVDLEE7O2lDQUExRDtBO2lFQUVDLEVBQUUsV0FBRixBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBTGEsQSxBQTZDNUI7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiQzovVXNlcnMvdXNlci9Eb2N1bWVudHMvc29saWRpdHkva2lja3N0YXJ0In0=
