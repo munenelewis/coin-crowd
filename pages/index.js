@@ -4,15 +4,16 @@ import factory from '../ethereum/factory'
 
 
 class CamapaignIdex extends Component{
-   async componentDidMount(){
-   const campaigns =  await factory.methods.getDeployedCampaings().call();
 
-   console.log(campaigns);
-   
+    static async getInitialProps(){
+        const campaigns =  await factory.methods.getDeployedCampaings().call();
+
+        return { campaigns };
+
     }
 
     render(){
-        return <div> campaigns index </div>
+        return <div> { this.props.campaigns[0] } </div>
     }
 
 }
