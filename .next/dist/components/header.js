@@ -10,6 +10,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _semanticUiReact = require("semantic-ui-react");
 
+var _routes = require("../routes");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = "C:\\Users\\user\\Documents\\solidity\\kickstart\\components\\header.js";
@@ -17,27 +19,36 @@ var _jsxFileName = "C:\\Users\\user\\Documents\\solidity\\kickstart\\components\
 exports.default = function () {
     return _react2.default.createElement(_semanticUiReact.Menu, { style: { marginTop: '15px' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 7
+            lineNumber: 9
         }
-    }, _react2.default.createElement(_semanticUiReact.Menu.Item, {
-        __source: {
+    }, _react2.default.createElement(_routes.Link, { route: "/", __source: {
             fileName: _jsxFileName,
-            lineNumber: 8
+            lineNumber: 10
         }
-    }, "Crowd Coid"), _react2.default.createElement(_semanticUiReact.Menu.Menu, { position: "right", __source: {
+    }, _react2.default.createElement("a", { className: "item", __source: {
             fileName: _jsxFileName,
-            lineNumber: 12
+            lineNumber: 11
         }
-    }, _react2.default.createElement(_semanticUiReact.Menu.Item, {
-        __source: {
+    }, "Crowd Coin")), _react2.default.createElement(_semanticUiReact.Menu.Menu, { position: "right", __source: {
             fileName: _jsxFileName,
-            lineNumber: 13
+            lineNumber: 16
         }
-    }, "Campaigns"), _react2.default.createElement(_semanticUiReact.Menu.Item, {
-        __source: {
+    }, _react2.default.createElement(_routes.Link, { route: "/", __source: {
             fileName: _jsxFileName,
             lineNumber: 17
         }
-    }, "+")));
+    }, _react2.default.createElement("a", { className: "item", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18
+        }
+    }, "Crowd Coin")), _react2.default.createElement(_routes.Link, { route: "/campaigns/new", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+        }
+    }, _react2.default.createElement("a", { className: "item", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25
+        }
+    }, "+"))));
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXGhlYWRlci5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIk1lbnUiLCJtYXJnaW5Ub3AiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBLEFBQVE7Ozs7QUFFUixBQUFTLEFBRVQ7Ozs7OztrQkFBZSxZQUFJLEFBQ2Y7MkJBQ0ksQUFBQyx1Q0FBSyxPQUFPLEVBQUUsV0FBZixBQUFhLEFBQWE7c0JBQTFCO3dCQUFBLEFBQ0k7QUFESjtLQUFBLGtCQUNLLGNBQUQsc0JBQUEsQUFBTTs7c0JBQU47d0JBQUE7QUFBQTtBQUFBLE9BREosQUFDSSxBQUlBLCtCQUFDLGNBQUQsc0JBQUEsQUFBTSxRQUFLLFVBQVgsQUFBc0I7c0JBQXRCO3dCQUFBLEFBQ0E7QUFEQTt1QkFDQyxjQUFELHNCQUFBLEFBQU07O3NCQUFOO3dCQUFBO0FBQUE7QUFBQSxPQURBLEFBQ0EsQUFJQSw4QkFBQyxjQUFELHNCQUFBLEFBQU07O3NCQUFOO3dCQUFBO0FBQUE7QUFBQSxPQVhSLEFBQ0ksQUFLSSxBQUtBLEFBUVg7QUFwQkQiLCJmaWxlIjoiaGVhZGVyLmpzIiwic291cmNlUm9vdCI6IkM6L1VzZXJzL3VzZXIvRG9jdW1lbnRzL3NvbGlkaXR5L2tpY2tzdGFydCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXGhlYWRlci5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIk1lbnUiLCJMaW5rIiwibWFyZ2luVG9wIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxBQUFROzs7O0FBRVIsQUFBUzs7QUFFVCxBQUFTLEFBQVksQUFFckI7Ozs7OztrQkFBZSxZQUFJLEFBQ2Y7MkJBQ0ksQUFBQyx1Q0FBSyxPQUFPLEVBQUUsV0FBZixBQUFhLEFBQWE7c0JBQTFCO3dCQUFBLEFBQ0k7QUFESjtLQUFBLGtCQUNJLEFBQUMsOEJBQUssT0FBTixBQUFZO3NCQUFaO3dCQUFBLEFBQ0E7QUFEQTt1QkFDQSxjQUFBLE9BQUcsV0FBSCxBQUFhO3NCQUFiO3dCQUFBO0FBQUE7T0FGSixBQUNJLEFBQ0EsQUFLQSxnQ0FBQyxjQUFELHNCQUFBLEFBQU0sUUFBSyxVQUFYLEFBQXNCO3NCQUF0Qjt3QkFBQSxBQUNBO0FBREE7dUJBQ0EsQUFBQyw4QkFBSyxPQUFOLEFBQVk7c0JBQVo7d0JBQUEsQUFDQTtBQURBO3VCQUNBLGNBQUEsT0FBRyxXQUFILEFBQWE7c0JBQWI7d0JBQUE7QUFBQTtPQUZBLEFBQ0EsQUFDQSxBQU1HLGdDQUFBLEFBQUMsOEJBQUssT0FBTixBQUFZO3NCQUFaO3dCQUFBLEFBQ0g7QUFERzt1QkFDSCxjQUFBLE9BQUcsV0FBSCxBQUFhO3NCQUFiO3dCQUFBO0FBQUE7T0FqQlIsQUFDSSxBQU9JLEFBUUcsQUFDSCxBQVVYO0FBNUJEIiwiZmlsZSI6ImhlYWRlci5qcyIsInNvdXJjZVJvb3QiOiJDOi9Vc2Vycy91c2VyL0RvY3VtZW50cy9zb2xpZGl0eS9raWNrc3RhcnQifQ==
