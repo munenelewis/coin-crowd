@@ -1,12 +1,13 @@
 import React , {Component} from 'react';
 import Layout from '../../components/layout';
-import {Form , Button, Input} from 'semantic-ui-react';
+import {Form , Button, Input, Message} from 'semantic-ui-react';
 import factory from '../../ethereum/factory';
 import web3 from '../../ethereum/web3';
 
 class CampaignNew extends Component {
     state ={
-        minimuContribution: ''
+        minimuContribution: '',
+        errorMessage: ''
     };
 
     onSubmit = async (event) =>{
@@ -16,19 +17,23 @@ class CampaignNew extends Component {
         // when
         event.preventDefault();
 
+        try {
         const accounts = await web3.eth.getAccounts();
         await factory.methods
         .creatCampaign(this.state.minimuContribution)
         .send({
             from: accounts[0]
         });
-
+            
+        } catch (err) {
+            this.setState ({errorMessage: err.message});
+        }    
     };
     render(){
         return(
         <Layout>
         <h3> Create a Campaign </h3>
-        <Form>
+        <Form  onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
             <Form.Field>
                 <label> Minum Contribution </label>
                 <Input 
@@ -40,6 +45,8 @@ class CampaignNew extends Component {
                 
                 />
             </Form.Field>
+            <Message error header="oooops" content={this.state.errorMessage} />
+           
             <Button primary> Create </Button>
         </Form>
         </Layout>
