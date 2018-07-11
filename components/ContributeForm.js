@@ -6,7 +6,9 @@ import { Router } from '../routes';
 
 class ContributeForm extends Component{
     state ={
-        value: ''
+        value: '',
+        error:'',
+        loading: false
     };
 
     onSubmit = async (event) =>{
@@ -14,6 +16,8 @@ class ContributeForm extends Component{
 
 
        const campaign = Campaign(this.props.address);
+
+       this.setState({ loading: true });
 
 
        try {
@@ -29,14 +33,17 @@ class ContributeForm extends Component{
            Router.replaceRoute(`/campaigns/${this.props.address}`)
            
            
-       } catch (error) {
+       } catch (err) {
+           this.setState({ errorMessage: err.message });
            
        }
+
+       this.setState({ loading: false, value: '' });
 
     };
 
     render() {
-        return (<Form onSubmit={this.onSubmit}>
+        return (<Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
                 <Form.Field>
                     <label> Amount to contribute </label>
                     <Input 
@@ -47,8 +54,8 @@ class ContributeForm extends Component{
 
                     />
                 </Form.Field>
-
-                <Button primary>
+                <Message error header={" oops "} content={this.state.errorMessage} />
+                <Button loading={this.state.loading} primary>
 
                 Contribute
 
