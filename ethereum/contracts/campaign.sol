@@ -66,7 +66,7 @@ contract Campaign {
         require(msg.value > minimumContribution);
         
         approvers[msg.sender] = true;
-        approversCount++;
+        approversCount++
     }
     
     // a function that instantiates the the struct Request
